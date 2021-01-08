@@ -1,6 +1,7 @@
+"use strict";
 const express = require('express');
-const routes  = require('.\routes');
-class App {
+const routes  = require('./routes');
+class app {
    constructor() {
      this.server = express();
      this.middlewares();
@@ -12,8 +13,8 @@ class App {
    }
 
    routes() {
-    this.server.use();
+    this.server.use(routes);
 
    }
 }
-module.exports = new App().server;
+module.exports = new app().server;
